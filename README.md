@@ -24,7 +24,7 @@ git clone https://github.com/{username}/markdown-editor.git
 To install the dependencies just do an:
 
 ```bash
-npm install or yarn isntsll
+npm install or yarn install
 ```
 
 ### Start
