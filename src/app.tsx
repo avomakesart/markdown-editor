@@ -3,8 +3,8 @@ import { useState, useCallback } from 'react';
 import * as ReactDOM from 'react-dom';
 
 import './app.css';
-import Editor from './components/editor/index';
-import Preview from './components/preview/index';
+import Editor from './components/editor';
+import Preview from './components/preview';
 
 const App: React.FC = () => {
   const [doc, setDoc] = useState<string>('#Hello, World!\n');
