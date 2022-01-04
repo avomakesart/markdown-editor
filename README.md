@@ -19,6 +19,22 @@ git clone https://github.com/{username}/markdown-editor.git
 
 - Themes: <https://codemirror.net/theme/>
 
+## Install
+
+To install the dependencies just do an:
+
+```bash
+npm install or yarn isntsll
+```
+
+### Start
+
+To start the app just an:
+
+```bash
+npm start or yarn start
+```
+
 ## Use case
 
 ```jsx
