@@ -1,0 +1,59 @@
+{
+  "name": "@alvcastillo/markdown-editor",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "build:start": "cd dist && PORT=8081 npx serve",
+    "start": "webpack serve --open --mode development",
+    "start:live": "webpack serve --open --mode development --live-reload --hot"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Alvaro Castillo",
+    "email": "alvaro.castillo777@gmail.com"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "postcss": "^8.2.1",
+    "postcss-loader": "^4.1.0",
+    "style-loader": "^3.3.0",
+    "typescript": "^4.5.2",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1",
+    "simple-git-hooks": "^2.6.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@codemirror/commands": "^0.19.1",
+    "@codemirror/gutter": "^0.19.1",
+    "@codemirror/highlight": "^0.19.2",
+    "@codemirror/history": "^0.19.0",
+    "@codemirror/lang-javascript": "^0.19.1",
+    "@codemirror/lang-markdown": "^0.19.1",
+    "@codemirror/language": "^0.19.2",
+    "@codemirror/language-data": "^0.19.0",
+    "@codemirror/matchbrackets": "^0.19.1",
+    "@codemirror/state": "^0.19.1",
+    "@codemirror/theme-one-dark": "^0.19.0",
+    "github-markdown-css": "^4.0.0",
+    "remark-gfm": "^2.0.0",
+    "remark-parse": "^10.0.0",
+    "remark-react": "^9.0.1",
+    "unified": "^10.1.0",
+    "hast-util-sanitize": "^4.0.0",
+    "process": "^0.11.10"
+  }
+}
