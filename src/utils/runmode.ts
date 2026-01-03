@@ -1,7 +1,7 @@
-import { highlightTree } from '@codemirror/highlight';
-import { languages } from '@codemirror/language-data';
-import { oneDarkHighlightStyle } from '@codemirror/theme-one-dark';
-import type { Language, LanguageDescription } from '@codemirror/language';
+import { highlightTree } from "@codemirror/highlight";
+import { languages } from "@codemirror/language-data";
+import { oneDarkHighlightStyle } from "@codemirror/theme-one-dark";
+import type { Language, LanguageDescription } from "@codemirror/language";
 
 type RunModeCallback = (
   text: string,

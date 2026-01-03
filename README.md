@@ -1,57 +1,62 @@
-# React Markdown Editor with preview
+# React Markdown Editor
 
-How cool would it be to have a markdown editor for your files?
+A modern, real-time markdown editor with live preview built with React and CodeMirror.
 
-With this editor you can do it, just make sure to do the following:
+## Features
 
-- Fork this repo.
-- Clone your forked repo:
+- ✨ Live markdown preview
+- 🎨 Syntax highlighting with CodeMirror
+- 📝 Support for GitHub Flavored Markdown (GFM)
+- 🌙 Dark theme (oneDark)
+- ⌨️ Rich keyboard shortcuts
+- 🔢 Line numbers and active line highlighting
+- 📦 Customizable editor themes
 
-```bash
-git clone https://github.com/{username}/markdown-editor.git 
-```
+## Quick Start
 
-- Use it as you want to.
-
-> Do you need different styles for it?
-
-- Go to to `src/hooks/use-codemirror.tsx` edit the theme, so far I'm using `oneDark` theme, but you can replace it with the theme that you like.
-
-- Themes: <https://codemirror.net/theme/>
-
-## Install
-
-To install the dependencies just do an:
+### Installation
 
 ```bash
-npm install or yarn install
+# Clone the repository
+git clone https://github.com/{username}/markdown-editor.git
+cd markdown-editor
+
+# Install dependencies
+bun install
+# or
+npm install
+# or
+yarn install
 ```
 
-### Start
-
-To start the app just an:
+### Development
 
 ```bash
-npm start or yarn start
+# Start the development server
+bun dev
+# or
+npm start
+# or
+yarn start
 ```
 
-## Use case
+The editor will be available at `http://localhost:5173`
+
+## Usage
 
 ```jsx
-// css for the app container 
+import { useCallback, useState } from 'react';
 import './app.css';
 import Editor from './components/editor';
 import Preview from './components/preview';
 
-const App: React.FC = () => {
-  // initial state for the editor and preview
-  const [doc, setDoc] = useState<string>('#Hello, World!\n');
+const App = () => {
+  const [doc, setDoc] = useState<string>('# Hello, Markdown!\n\nStart editing...');
 
-  // Change handler
-  const handleDocChange = useCallback((newDoc) => {
+  const handleDocChange = useCallback((newDoc: string) => {
     setDoc(newDoc);
   }, []);
-  
+
   return (
     <div className='app'>
       <Editor onChange={handleDocChange} initialDoc={doc} />
@@ -63,6 +68,37 @@ const App: React.FC = () => {
 export default App;
 ```
 
-### Licence
+## Customization
+
+### Changing the Theme
+
+To customize the editor theme, edit `src/hooks/use-codemirror.tsx`:
+
+```typescript
+import { oneDark } from '@codemirror/theme-one-dark';
+// Change 'oneDark' to your preferred theme
+```
+
+Available themes: https://codemirror.net/theme/
+
+### Editing Syntax Highlighting
+
+Modify the `syntaxHighlighting` object in `src/hooks/use-codemirror.tsx` to customize the appearance of markdown elements like headings, code blocks, etc.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── editor/       # CodeMirror editor component
+│   ├── preview/      # Markdown preview component
+│   └── remark-code/  # Custom code block renderer
+├── hooks/
+│   └── use-codemirror.tsx  # CodeMirror setup hook
+├── utils/
+└── app.tsx          # Main app component
+```
+
+## License
 
 MIT
